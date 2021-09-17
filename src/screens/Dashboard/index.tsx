@@ -4,7 +4,7 @@ import { Container ,Title} from './styles'
 export default function Dashboard(){
     return (
         <Container>
-            <Title >asdasd</Title>
+            <Title >Dashboard</Title>
         </Container>
     )
 }
