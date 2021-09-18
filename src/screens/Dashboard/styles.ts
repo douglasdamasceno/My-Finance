@@ -75,3 +75,5 @@ export const Title = styled.Text`
   color: ${({ theme }) => theme.colors.title};
   margin-bottom: 16px;
 `;
+
+export const TransctionList = styled.FlatList``;
