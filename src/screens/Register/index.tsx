@@ -1,4 +1,5 @@
-import React from 'react'
+import React,{useState} from 'react'
+
 import { Button } from '../../components/Forms/button'
 import Input from '../../components/Forms/Input'
 import { TransactionTypeButton } from '../../components/Forms/TransactionTypeButton'
@@ -13,18 +14,35 @@ import {
 
 
 export default function Register() {
-    return (<Container>
+    const [transactionType, setTransactionType] = useState('');
+    
+    
+    function handleTransactionTypeSelect(type:'up' | "down"){
+        setTransactionType(type);
+    }
+
+    return (
+    <Container>
         <Header>
             <Title>Cadastro</Title>
         </Header>
         <Form>
             <Fields>
-            <Input placeholder="Nome" />
+                <Input placeholder="Nome" />
                 <Input placeholder="Preço" />
-            <TransactionTypes>    
-            <TransactionTypeButton type="up" title="Income"/>
-            <TransactionTypeButton type="down" title="Outcome"/>
-              </TransactionTypes> 
+                <TransactionTypes>    
+                    <TransactionTypeButton
+                        isActive={transactionType=='up'}
+                        type="up"
+                        title="Income"
+                        onPress={() => handleTransactionTypeSelect('up')}
+                    />
+                    <TransactionTypeButton
+                        isActive={transactionType == 'down'}
+                        type="down" title="Outcome"
+                        onPress={() => handleTransactionTypeSelect('down')}
+                    />
+                </TransactionTypes> 
             </Fields>
             <Button title="Enviar"  />
 
