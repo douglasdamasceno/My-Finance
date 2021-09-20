@@ -10,7 +10,7 @@ import { useForm } from 'react-hook-form';
 import * as Yup from 'yup';
 import { yupResolver} from '@hookform/resolvers/yup';
 
-import { Button } from '../../components/Forms/button';
+import  Button  from '../../components/Forms/Button';
 import { CategorySelectButton } from '../../components/Forms/CategorySelectButton';
 //import Input from '../../components/Forms/Input';
 import InputForm from '../../components/Forms/InputForm';
