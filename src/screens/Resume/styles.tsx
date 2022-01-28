@@ -3,10 +3,9 @@ import styled from "styled-components/native";
 
 
 export const Container = styled.View`
-flex: 1;
-background-color: ${({theme})=> theme.colors.background};
+    flex: 1;
+    background-color: ${({theme})=> theme.colors.background};
 `;
-
 export const Header = styled.View`
  background-color: ${({ theme }) => theme.colors.primary};
  
@@ -23,21 +22,3 @@ export const Title = styled.Text`
     color: ${({ theme }) => theme.colors.shape}
 `;
 
-export const Form = styled.View`
-    flex: 1;
-    width: 100%;
-
-    justify-content: space-between;
-    padding: 24px;
-`;
-
-export const Fields = styled.View`
-`;
-
-export const TransactionTypes = styled.View`
-width: 100%;
-flex-direction: row;
-justify-content: space-between;
-margin-bottom: 16px;
-margin-top: 8px;
-`;
