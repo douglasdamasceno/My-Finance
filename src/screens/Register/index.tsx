@@ -120,8 +120,9 @@ export default function Register() {
             console.log(JSON.parse(data!));
         }
         loadData();
-        async function limpar() {
-            await AsyncStorage.clear();
+        async function clearStorage() {
+            const dataKey = "@gofinances:transactions";
+            await AsyncStorage.removeItem(dataKey);
             console.log('limpo');
         }
         
