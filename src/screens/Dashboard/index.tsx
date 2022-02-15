@@ -57,11 +57,6 @@ export default function Dashboard() {
                     .map(transaction => new Date(transaction.date).getTime())
                 )
             )
-        // return Intl.DateTimeFormat('pt-BR', {
-        //             day: '2-digit',
-        //             month: '2-digit',
-        //             year: '2-digit',
-        // }).format(new Date(lastTransaction));
         return `${lastTransaction.getDate()} de ${lastTransaction.toLocaleString('pt-BR', {
             month: 'long'
         })}`;
@@ -137,9 +132,6 @@ export default function Dashboard() {
         })
         setIsLoading(false);
     }
-    useEffect(() => {
-        loadTransactions();
-    }, [])
     
     useFocusEffect(useCallback(() => {
         loadTransactions();
@@ -147,7 +139,6 @@ export default function Dashboard() {
 
     return (
         <Container>
-           
             {
                 isLoading ?
                     <LoadContainer>    
